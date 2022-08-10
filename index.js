@@ -74,7 +74,7 @@ Do the following:
 
 function multiply(a,b){
   return a * b;
-}
+};
 console.log(multiply(7,15));
 
 
@@ -91,7 +91,7 @@ Do the following:
 
 function dogYears(ageOfHuman){
   return ageOfHuman * 7;
-}
+};
 console.log(dogYears(12));
 
 
@@ -142,9 +142,22 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(weightPounds,ageYears){
+  if(weightPounds <= 5 && ageYears >= 1 || ageYears < .58 && ageYears > .35){
+     const foodAmount =  (weightPounds * .05);
+    } else if (weightPounds >= 6 && weightPounds < 11 && ageYears >= 1 || ageYears < 1 && ageYears > .58) {
+      const foodAmount = (weightPounds * .04);
+      return foodAmount;
+    } else if (weightPounds >= 11 && weightPounds <= 15 && ageYears >= 1) {
+      const foodAmount = weightPounds *.03;
+      return foodAmount;
+    } else if (weightPounds > 15 && ageYears >= 1) {
+      const foodAmount = weightPounds * .02;
+      return foodAmount;
+    }else {
+      const foodAmount = weightPounds * .02;
+      return foodAmount;};
+};console.log(hungryDog(14,3));
 
 
 
@@ -168,10 +181,25 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
-
+let computer = Math.random();
+ if(computer < .33) {
+  computer = 'rock'
+} else if (computer > .33 && computer < .66){
+  computer = 'paper';
+} else{
+  computer = 'scissors'
+};
 function game(user, computer){
-  /*add your code here*/
-}
+  if(user === 'rock' && computer === 'scissors' || user === 'paper' && computer === 'rock' || user === 'scissors' && computer === 'paper'){
+    return "YOU BEAT THE COMPUTER!!!";
+  } else if (user === computer){
+    return "It's a Tie";
+  } else {
+    return "You Lose"
+  };
+};
+console.log(computer);
+console.log(game('rock',computer));
 
 
 
