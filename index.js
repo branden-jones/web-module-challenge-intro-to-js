@@ -214,9 +214,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
-}
+function miles(kilometers){
+  return (Math.round((kilometers / 1.609)) + ' miles');
+};console.log(miles(329));
 
 
 
@@ -228,9 +228,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
-}
+function feet(cm){
+  return (Math.round(cm / 30.48) + 'ft');
+}console.log(feet(309));
 
 
 
@@ -248,10 +248,14 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
-
+function annoyingSong(number){
+  return number + " bottles of soda on the wall, " + number + " bottles of soda, take one down pass it around " + (number - 1) + " bottles of soda on the wall!";
+}; 
+let number = 20;
+while (number > 0){
+console.log(annoyingSong(number));
+number--;
+};
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -268,9 +272,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
+function grade(grade){
+  if(grade >= 90){
+    return 'you got an A';
+  } else if (grade >= 80 && grade < 90){
+    return 'you got a B';
+  } else if(grade >= 70 && grade < 80){
+    return 'you got a C';
+  } else if(grade >= 60 && grade <70){
+    return 'you got a D';
+  } else {
+    return 'you got an F'
+  }
+  };console.log(grade(73));
 
 
 
@@ -287,9 +301,12 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
+function vowelCounter(string){
+  const vowels = /[aeiou]/gi;
+  const x = string.match(vowels);
+  return x.length;
+};
+console.log(vowelCounter('The quick brown fox jumps over the lazy dog. It barked.'))
 
 
 
